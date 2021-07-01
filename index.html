@@ -1,0 +1,1100 @@
+
+        <style>
+            * {
+                box-sizing: border-box;
+
+            }
+
+            body {
+                font-family: Verdana, sans-serif;
+                margin: 0
+            }
+
+
+
+            /*__________________slider____________________________*/
+
+            * {
+                box-sizing: border-box
+            }
+
+
+            img {
+                vertical-align: middle;
+            }
+
+            /* Slideshow container */
+            .slideshow-container {
+                max-width: 1000px;
+                position: relative;
+                margin: auto;
+            }
+
+            /* Next & previous buttons */
+            .prev,
+            .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+            }
+
+
+
+            /* Position the "next button" to the right */
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+            .prev-one {
+                left: 0;
+            }
+
+            /* On hover, add a grey background color */
+            .prev:hover,
+            .next:hover {
+                background-color: #f1f1f1;
+                color: black;
+            }
+
+
+
+
+            /*_____________________slider___________________________________________________________*/
+
+            .main {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                max-width: 100%;
+                width: 1280px;
+                height: 1200px;
+
+            }
+
+            h2 {
+                text-align: center;
+                margin: 0;
+                font-style: italic;
+
+
+            }
+
+            p {
+                text-align: center;
+            }
+
+
+            .box-history {
+                background: #e8e8e8;
+                max-width: 1000px;
+
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0 30px;
+
+            }
+
+            .mini-box {
+                /*border: 1px solid #000;*/
+                width: 100px;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                flex-wrap: wrap;
+                text-align: center;
+
+            }
+
+            .content-history {
+                max-width: 1000px;
+                height: auto;
+                background: #e8e8e8;
+
+                margin: auto;
+            }
+
+            .box-circle {
+                background: red;
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                border: 2px solid black;
+                box-shadow: 2px solid red;
+                z-index: 1000;
+
+            }
+
+            .mini-box p {
+                font-size: 0.8rem;
+                font-style: italic;
+            }
+
+            [a] {
+                padding-top: 50px;
+            }
+
+            [x] {
+                margin-bottom: 20px;
+            }
+
+            [y] {
+                margin-bottom: 20px;
+            }
+
+            [red] {
+                background: red;
+                color: #fff;
+                border-radius: 5px;
+
+
+            }
+
+            [txt] {
+                font-weight: 500;
+                color: #000;
+            }
+
+
+
+            /* abre linhas historia*/
+
+
+            .box-circle .line-s {
+                background: #000;
+                position: static;
+                width: 100px;
+                height: 3px;
+                z-index: 1;
+                transform: rotate(-18deg);
+                margin-top: -13px;
+                margin-left: 10px;
+
+
+
+            }
+
+
+
+            .box-circle .line-d {
+                background: #000;
+                width: 100px;
+                height: 3px;
+                transform: rotate(13deg);
+                margin-top: 15px;
+                margin-left: 10px;
+                z-index: 1;
+
+
+            }
+
+            .box-circle .line-z {
+                background: #000;
+                width: 110px;
+                height: 3px;
+                transform: rotate(25deg);
+                margin-top: 30px;
+                margin-left: 5px;
+                z-index: 1;
+
+            }
+
+            .box-circle .line-y {
+                background: #000;
+                width: 105px;
+                height: 3px;
+                transform: rotate(18deg);
+                margin-top: 22px;
+                margin-left: 10px;
+                z-index: 1;
+
+            }
+
+            @media (max-width: 1021px) {
+
+                .box-circle .line-s {
+                    display: none;
+                }
+
+                .box-circle .line-d {
+                    display: none;
+                }
+
+                .box-circle .line-z {
+                    display: none;
+                }
+
+                .box-circle .line-y {
+                    display: none;
+                }
+
+                .line-mobile {
+                    width: 1650px;
+                    height: 13px;
+                    background: rgb(181, 181, 181);
+                    transform: rotate(90deg);
+                    position: absolute;
+                    z-index: 100;
+                }
+
+                .box-history {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    max-width: 900px;
+                    margin: auto;
+                    padding: 20px;
+                }
+
+                .mini-box span {
+                    font-size: 1.5rem;
+                }
+
+                .mini-box p {
+                    font-size: 1rem;
+                }
+
+                #right {
+
+                    margin-right: 200px;
+                    border-radius: 10px;
+                    width: 180px;
+                    height: auto;
+                    padding-left: 10px;
+
+                    background: rgb(181, 181, 181);
+                    flex: 1;
+                }
+
+                #left {
+                    background: rgb(181, 181, 181);
+                    border-radius: 10px;
+                    margin-left: 200px;
+                    width: 180px;
+                    height: 200px;
+
+
+                }
+
+                #right .right {
+                    margin-left: 160px;
+                }
+
+                #left .left {
+                    margin-left: -170px;
+                }
+
+
+
+
+            }
+
+            /* fecha linhas historia*/
+            .grup-sforza-container {
+                max-width: 1000px;
+                margin: auto;
+
+            }
+
+            .grup-sforza-container p {
+
+                font-size: 0.9rem;
+                font-style: italic;
+                padding: 0 50px;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            .title-topper {
+                margin-top: 30px;
+                font-style: italic;
+            }
+
+            .container-value {
+                max-width: 1000px;
+                height: auto;
+                margin: auto;
+
+                margin-bottom: 50px;
+
+            }
+
+            #triangle-left {
+                transform: rotateY(180deg);
+                width: 0;
+                height: 0;
+                border-top: 250px solid transparent;
+                border-bottom: 0 solid transparent;
+                border-left: 25px solid red;
+                clear: left;
+                float: right;
+                z-index: 1000;
+
+            }
+
+            #triangle-right {
+                transform: rotateX(-180deg);
+                width: 0;
+                height: 0;
+                border-top: 250px solid transparent;
+                border-bottom: 0 solid transparent;
+                border-left: 25px solid red;
+
+            }
+
+            .container .container-value .img-chuteira {
+                max-width: 1000px;
+                position: relative;
+                margin: auto;
+                height: auto;
+
+            }
+
+            .wrapper {
+                width: 100%;
+                height: auto;
+                max-width: 1000px;
+
+                margin: auto;
+            }
+
+            .wrapper .wrapper-slider {
+                width: 100%;
+                max-width: 1000px;
+                height: auto;
+                margin-bottom: 127px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+            }
+
+            .wrapper .wrapper-slider .mini-slider {
+                width: 60%;
+                height: 200px;
+                background: rgb(181, 181, 181);
+            }
+
+            .wrapper .wrapper-slider .title-slider {
+                width: 40%;
+                height: 200px;
+                background: #fff;
+                margin-top: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+            }
+
+            .wrapper .wrapper-slider-1 .title-slider-1 {
+                width: 40%;
+                height: auto;
+                background: #fff;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+            }
+
+            .title-slider .content {
+                width: 80%;
+                height: auto;
+                border-left: 12px solid #000;
+                padding-left: 10px;
+            }
+
+            .title-slider .content p {
+                text-align: start;
+            }
+
+            .title-slider-1 .content {
+                width: 80%;
+                height: auto;
+                border-right: 12px solid #000;
+                padding-right: 10px;
+                text-align: right;
+                margin-top: 200px;
+            }
+
+            .title-slider-1 .content p {
+                text-align: end
+            }
+          
+
+
+            .wrapper .wrapper-slider-1 .title-slider-1 h3 {
+                color: red;
+                font-style: italic;
+                margin-top: 0;
+                margin-bottom: 3px;
+            }
+
+            .wrapper .wrapper-slider .title-slider h3 {
+                color: red;
+                font-style: italic;
+                margin-top: 0;
+                margin-bottom: 3px;
+            }
+
+
+            .content__box__title {
+                background: #000;
+                width: 100%;
+                height: 200px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+                margin-top: 225px;
+            }
+
+            .content__box__title strong {
+                font-style: italic;
+                color: red;
+            }
+
+            .content__box__title strong>span {
+                color: #fff;
+                font-style: italic;
+
+            }
+
+            .content__box__title p {
+                color: rgb(181, 181, 181);
+                font-size: 0.8rem;
+
+
+            }
+
+
+
+
+            .wrapper .wrapper-slider-1 {
+                width: 100%;
+                max-width: 1000px;
+                height: auto;
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+
+
+            }
+
+            .wrapper .wrapper-slider-1 .mini-slider-1 {
+                width: 60%;
+                height: 200px;
+                background: rgb(181, 181, 181);
+            }
+
+            .wrapper .wrapper-slider-1 .title-slider-1 {
+                width: 40%;
+                height: 200px;
+                background: #fff;
+
+            }
+
+
+
+
+            @media (max-width: 800px) {
+                .wrapper .wrapper-slider {
+
+                    display: flex;
+                    flex-direction: column;
+
+                }
+
+
+                .wrapper .wrapper-slider-1 {
+
+                    display: flex;
+                    flex-direction: column;
+                    order: 1;
+
+                }
+
+                .wrapper .wrapper-slider-1 .title-slider-1 {
+
+                    order: 2;
+                }
+
+                .title-slider {
+                    margin-top: 50px;
+                    margin-bottom: 50px;
+                }
+
+                .title-slider-1 {
+                    margin-top: 50px;
+                    margin-bottom: 50px;
+                }
+
+
+
+            }
+
+
+            /*___________slider-black___________________________________________________*/
+
+            .wrapper .wrapper-slider-2 {
+                width: 100%;
+                max-width: 1000px;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+               
+            }
+
+            .wrapper .wrapper-slider-2 .mini-slider-2 {
+                width: 60%;
+                height: auto;
+                background: rgb(181, 181, 181);
+
+
+            }
+
+            .wrapper .wrapper-slider-2 .title-slider-2 {
+                width: 40%;
+                height: auto;
+                background: #000;
+            }
+
+            .title-slider-2 .content {
+                width: 80%;
+                height: auto;
+                border-left: 12px solid grey;
+                margin-left: 20px;
+                text-align: left;
+
+
+            }
+
+            .title-slider-2 .content p {
+                text-align: start;
+                color: grey;
+                margin-left: 10px;
+                font-size: 0.8rem;
+
+            }
+
+            .wrapper .wrapper-slider-2 .title-slider-2 h3 {
+                color: red;
+                font-style: italic;
+                margin-top: 0;
+                margin-bottom: 3px;
+                margin-left: 10px;
+                font-weight: 500;
+            }
+
+            .title-slider-2 .content strong {
+                color: grey;
+                margin-left: 10px;
+                font-size: 0.9rem;
+            }
+
+            .title-slider-1 .content strong {
+
+                font-size: 0.9rem;
+            }
+
+            .title-slider .content strong {
+
+                font-size: 0.9rem;
+            }
+
+            @media (max-width: 800px) {
+
+
+                .wrapper .wrapper-slider-2 {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .wrapper .order {
+                    order: 1;
+                }
+
+                .wrapper .wrapper-slider-2 .title-slider-2 {
+                    order: 2;
+                }
+
+                .title-slider-2 {
+                    margin-top: 50px;
+                    margin-bottom: 50px;
+                }
+
+                .wrapper .wrapper-slider {
+                    margin: 0;
+                }
+
+                .wrapper .wrapper-slider .title-slider {
+                    margin: 50px;
+                    padding: 0;
+                }
+
+                .content__box__title {
+                    margin: 0;
+                }
+
+
+            }
+
+            .wrapper-slider-2{
+                background: #000;
+            }
+
+
+
+
+            /*______________slider-black________________________________________________*/
+
+            * {
+                box-sizing: border-box
+            }
+
+            
+
+            img {
+                vertical-align: middle;
+            }
+
+            /* Slideshow container */
+            .slideshow__container {
+                max-width: 1000px;
+                position: relative;
+                margin: auto;
+            }
+
+            /* Next & previous buttons */
+            .prev__2,
+            .next__2 {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+            }
+
+            /* Position the "next button" to the right */
+            .next__2 {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+            /* On hover, add a grey background color */
+            .prev__2:hover,
+            .next__2:hover {
+                background-color: #f1f1f1;
+                color: black;
+            }
+</style>
+<p>
+
+</p>
+<div id="main">
+            <div class="slideshow-container">
+                <div class="mySlides1">
+                    <img src="https://www.topper.com.br/media/interface/files/PG_TOPPER_v4.png" style="width:100%">
+                </div>
+
+              
+
+
+                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+            </div>
+
+
+
+
+            <div class="content-history">
+                <h2>A HISTÓRIA DA MARCA</h2>
+                <div class="box-history">
+
+
+                    <div class="line-mobile"></div>
+
+                    <div class="mini-box" id="right" a>
+                        <span>1975</span>
+                        <div class="box-circle right">
+                            <div class="line-s"></div>
+                        </div>
+                        <p>Inicio das
+                            vendas da
+                            Topper Brasil</p>
+
+                    </div>
+
+                    <div class="mini-box" id="left" b>
+                        <span>1976</span>
+                        <div class="box-circle left">
+                            <div class="line-d"></div>
+                        </div>
+
+                        <p>Lançamentos
+                            da linha completa
+                            de produtos
+                        </p>
+                    </div>
+                    <div class="mini-box " id="right" a>
+                        <span>1981</span>
+                        <div class="box-circle right">
+                            <div class="line-s"></div>
+                        </div>
+                        <p>Patrocínio do
+                            Corinthians e
+                            linha do Sócrates
+                        </p>
+
+                    </div>
+                    <div class="mini-box" id="left" b>
+                        <span>1982</span>
+                        <div class="box-circle left">
+                            <div class="line-d"></div>
+                        </div>
+                        <p>Patrocínio da
+                            Seleção Brasileira
+                            na Copa do Mundo
+                            na Espanha
+
+                        </p>
+                    </div>
+                    <div class="mini-box" id="right" a x>
+                        <span>1984</span>
+                        <div class="box-circle right">
+                            <div class="line-s"></div>
+                        </div>
+                        <p>
+                            Patrocínio da
+                            transmissão das
+                            Olimpíadas de
+                            Los Angeles
+                        </p>
+
+                    </div>
+                    <div class="mini-box" id="left" y>
+                        <span>90s</span>
+                        <div class="box-circle left">
+                            <div class="line-z"></div>
+                        </div>
+                        <p>
+                            Patrocínio da
+                            Liga de Futsal e de
+                            grandes clubes brasileiros
+                        </p>
+                    </div>
+                    <div class="mini-box" id="right" a>
+                        <span>2003</span>
+                        <div class="box-circle right">
+                            <div class="line-s"></div>
+                        </div>
+                        <p>
+                            Pelé se torna
+                            Embaixador
+                            da marca
+
+                        </p>
+
+                    </div>
+                    <div class="mini-box" id="left" b>
+                        <span>2015</span>
+                        <div class="box-circle left">
+                            <div class="line-y"></div>
+                        </div>
+                        <p red>
+                            A marca foi
+                            adquirida
+                            pela BR Sports
+                            <strong txt>(Grupo Sforza)</strong>
+                        </p>
+
+
+                    </div>
+                    <div class="mini-box" id="right" a>
+                        <span>2021</span>
+                        <div class="box-circle right">
+
+                        </div>
+                        <p>
+                            Lançamentos
+                            do modelo
+                            de franquias
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <h2 class="title-topper">GRUPO SFORZA</h2>
+            <div class="grup-sforza-container">
+                <p>
+                    A marca TOPPER pertence ao Grupo Sforza, uma empresa de investimento privado que
+                    tem como objetivo gerar retornos significativos para investidores, construindo um
+                    relacionamento forte com seus sócios, em um ambiente de excelência profissional e com
+                    os mais elevados padrões éticos. A Sforza atua no Brasil e no exterior nas áreas de
+                    private equity, real estate e asset management a partir da ampla experiência de sua
+                    equipe, sempre focada em maximizar o retorno sobre o capital investido.
+                </p>
+            </div>
+
+
+            <div class="container-value">
+                <img class="img-chuteira" src="https://www.topper.com.br/media/interface/files/chuteira-interno.png" style="width: 100%;" />
+            </div>
+            <div class="wrapper">
+                <div>
+                    <h2>CONHEÇA NOSSOS MODELOS DE FRANQUIAS</h2>
+                    <p>
+                        Modelos de negócios práticos, com baixo custo de <br>
+                        investimentos e fácil inserção no mercado.
+                    </p>
+                </div>
+
+                <div class="wrapper-slider">
+                    <div class="mini-slider">
+                        <div class="slideshow-container">
+                            <div class="mySlides2">
+                                <img src="https://www.topper.com.br//media/interface/files/-banner-PG_TOPPER_v4.png" style="width:100%">
+                            </div>
+
+                         
+
+
+
+                            <a class="prev prev-one" onclick="plusSlides(-1, 1)">&#10094;</a>
+                            <a class="next next-one" onclick="plusSlides(1, 1)">&#10095;</a>
+                        </div>
+
+
+
+                    </div>
+                    <div class="title-slider">
+                        <div class="content">
+
+                            <h3>QUIOSQUE TOPPER</h3>
+                            <p>
+                                Ponto de venda versátil para
+                                diversos espaços comerciais.
+                            </p>
+                            <strong>Custo: R$ 80.000</strong> <br>
+                            <strong>Área: 20m<sup>2</sup></strong>
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+
+                <div class="wrapper-slider-1">
+                    <div class="title-slider-1">
+                        <div class="content">
+
+                            <h3>CONTAINER TOPPER</h3>
+                            <p>
+                                Ponto de venda versátil para
+                                diversos espaços comerciais.
+                            </p>
+                            <strong>Custo: R$ 100.000</strong> <br>
+                            <strong>Área: 20m<sup>2</sup></strong>
+                            </p>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="mini-slider-1">
+
+                        <div class="slideshow-container">
+                            <div class="mySlides3">
+                                <img src="https://www.topper.com.br//media/interface/files/banner-PG_TOPPER_v4_1.png" style="width:100%">
+                            </div>
+
+                        
+
+
+
+                            <a class="prev prev-one" onclick="plusSlides(-1, 2)">&#10094;</a>
+                            <a class="next next-one" onclick="plusSlides(1, 2)">&#10095;</a>
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+                </div>
+                <div class="content__box__title">
+                    <strong>CONHEÇA NOSSOS MODELOS DE FRANQUIAS <span>DUPLA MARCA</span></strong>
+                    <p>Assim como Topper, o grupo Sforza tem dentro do portifólio a marca Rainha,<br>
+                        uma marca que desde 1934 está presente no coração dos brasileiros.</p>
+
+                </div>
+
+                <div class="wrapper-slider-2">
+                    <div class="mini-slider-2">
+                        <div class="slideshow__container">
+                            <div class="mySlides__1">
+                                <img src="https://www.topper.com.br//media/interface/files/-topper-rainha-01-PG_TOPPER_v4.png" style="width:100%">
+                            </div>
+
+                         
+
+                       
+
+                            <a class="prev__2" onclick="plusSlide(-1, 0)">&#10094;</a>
+                            <a class="next__2" onclick="plusSlide(1, 0)">&#10095;</a>
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+
+                    <div class="title-slider-2">
+                        <div class="content">
+                            <h3>LOJA DE RUA</h3>
+                            <p>
+                                Ponto de venda versátil para <br>
+                                diversos espaços comerciais.
+
+                            </p>
+                            <strong>Custo: R$ 80.000</strong> <br>
+                            <strong>Área: 20m<sup>2</sup></strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="wrapper-slider-2 order">
+
+                    <div class="title-slider-2">
+                        <div class="content">
+                            <h3>LOJA DE RUA</h3>
+                            <p>
+                                Ponto de venda versátil para <br>
+                                diversos espaços comerciais.
+
+                            </p>
+                            <strong>Custo: R$ 80.000</strong> <br>
+                            <strong>Área: 20m<sup>2</sup></strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mini-slider-2">
+
+                        <div class="slideshow__container">
+                            <div class="mySlides__2">
+                                <img src="https://www.topper.com.br//media/interface/files/-topper-rainha-01-PG_TOPPER_v4.png" style="width:100%">
+                            </div>
+
+
+
+                            <a class="prev__2" onclick="plusSlide(-1, 1)">&#10094;</a>
+                            <a class="next__2" onclick="plusSlide(1, 1)">&#10095;</a>
+                        </div>
+
+
+
+
+
+
+
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+ </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
